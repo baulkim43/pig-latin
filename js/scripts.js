@@ -7,8 +7,9 @@ var pigLatin = function(userInput) {
   if (vowels.includes(userInput[0])) {
     englishInputed = userInput.concat("ay");
   } else if (consonants.includes(userInput[0])) {
-    englishInputed = userInput + 
-    console.log(userInput.shift());
+    var englishInputed = englishInputed.push(englishInputed.splice(englishInputed.indexOf(userInput[0]), 1)[0]);
+   englishInputed.concat("ay")
+    console.log(englishInputed);
 
 
   }
