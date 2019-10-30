@@ -1,21 +1,22 @@
 //business logic
 var vowels = ["a", "e", "o", "u", "i", "A", "E", "O", "U", "I"]
+var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
 
-var pigLatin = function(englishInputed) {
-  if (englishInputed[0].includes(vowels)) {
-    console.log(englishInputed);
-    englishInputed.append("ay");
-  }
-  }
+var pigLatin = function(userInput) {
+  var englishInputed;
+  if (vowels.includes(userInput[0])) {
+    englishInputed = userInput.concat("ay");
+  } else if (consonants.includes(userInput[0])) {
+    englishInputed = userInput + 
+    console.log(userInput.shift());
 
-// for (i = 0; i = 0; i ++) {
-//   // if(vowels.includes(englishInputed)){
-//   //   englishInputed = englishInputed.append("ay");
-//   if(vowels.includes(englishInputed[0])){
-//     // englishInputed = englishInputed
-//   } console.log("hello")
-//  }
-// }
+
+  }
+  return englishInputed
+    }
+
+
+
 
 
 
@@ -37,9 +38,13 @@ var pigLatin = function(englishInputed) {
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
     event.preventDefault();
-    var englishInputed = $("#english").val().split("");
+    var englishInputed = $("input#english").val().split("");
+    // console.log(englishInputed);
+    // var englishInputed = ["e", "n", "g", "l", "i", "s", "h"]
     var result = pigLatin(englishInputed);
-    console.log(englishInputed);
+    $("#result").append(result);
+
+
 
   });
 });

@@ -20,10 +20,10 @@ _A program that takes English text and translates it into Pig Latin. This webpag
 * _The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels._
 _Input Example: 3_
 _Output Example: 3_
-* _The program adds "ay" to single-letter words beginning with a vowel._
+<!-- * _The program adds "ay" to single-letter words beginning with a vowel._ -->
 _Input Example: i_
 _Output Example: iay_
-* _The program adds "ay" to single-letter words beginning with a vowel regardless of capitalization._
+<!-- * _The program adds "ay" to single-letter words beginning with a vowel regardless of capitalization._ -->
 _Input Example: I_
 _Output Example: Iay_
 * _The program moves the first consecutive consonants to the end and adds "ay" to the words beginning with 1 or more consonant._
